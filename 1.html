@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="zh-CN" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no" />
+
+    <title>湖南科技职业学院 | ACM 协会</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="./favicon.ico" rel="shortcut icon">
+    <!--[if lt IE 9]>
+      		<div id='Not_' class="show-ui" style="height: 40px;background-color: rgb(221,79,67);text-align:center;line-height: 40px;color: white;">
+            	<b>您使用的浏览器版本过低，我们建议您使用更现代的浏览器得以获取更佳体验。</b>
+        	</div>
+   		<![endif]-->
+</head>
+
+<body>
+    <div id="loading" style="background-color: black;position: fixed;top: 0px;bottom: 0px;left: 0px;right: 0px; z-index:1000;">
+        <div style="position: relative;top: 45%;color: white;text-align: center;left: 0px;right: 0px;">
+            <h3 id="loading-text">Loading...</h3>
+            <script>
+                (function () {
+                    var ele = document.getElementById("loading-text");
+                    var loadmask = null;
+                    var i = 0;
+
+                    function loading() {
+                        ele.innerHTML += ".";
+                        if (i > 10) clearInterval(loadmask);
+                        i++;
+                    }
+                    loadmask = setInterval(loading, 1000);
+                })();
+            </script>
+        </div>
+    </div>
+
+    <div class="Header box-ui">
+        <div class="HeaderTitle">
+            <img src="assets/image/logo/ACM.png" width="64px">
+            <b>湖南科技职业学院 ACM 协会</b>
+        </div>
+        <div class="HeaderMenu phone-none">
+            
+          
+            <a class="" target="_black" href="ACM/index.html">详细信息</a>
+            
+        </div>
+    </div>
+    <div class="ImageContainer">
+        <div id="Image_1" class="ImageCar">
+            <img src="assets/image/1.jpg" draggable="false">
+            <div class="ImageText">
+                <h2>天道勤酬，学以致用</h2>
+                <p>学习更深的技术，获得更深的技术栈。</p>
+                <button>加入我们</button>
+            </div>
+        </div>
+        <div id="Image_2" class="ImageCar" style="display: none;">
+            <img src="assets/image/2.jpg" draggable="false">
+            <div class="ImageText">
+                <h2>认识更多的人，学习更多的知识</h2>
+                <p>从不放弃，学习是我们唯一宿命。</p>
+                <button>加入我们</button>
+            </div>
+        </div>
+        <div id="Image_3" class="ImageCar" style="display: none;">
+            <img src="assets/image/3.jpg" draggable="false">
+            <div class="ImageText">
+                <h2>Java，C++，Python 学习</h2>
+                <p>我们共同努力，共同学习！</p>
+                <button>前往参考</button>
+            </div>
+        </div>
+        <div id="Image_4" class="ImageCar" style="display: none;">
+            <img src="assets/image/4.jpg" draggable="false">
+            <div class="ImageText">
+                <h2>创新，开发，创造</h2>
+                <p>创造自己的小项目，也许能小赚一笔</p>
+                <button>联系我们</button>
+            </div>
+        </div>
+    </div>
+    <div class="BodyBar box-ui">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-3 BarItem">
+                    <div class="BarBook">
+                        <h4>C/C++ </h4>
+                        <p>ACM 算法比赛 标准语言</p>
+                        <p>强大的指针，和极速的效率</p>
+                        <p>不可思议的操作，万物的主宰</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 BarItem">
+                    <div class="BarBook">
+                        <h4>Java </h4>
+                        <p>ACM 算法比赛 标准语言</p>
+                        <p>面向对象的思路编程</p>
+                        <p>强大的 API 库，自动算法</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 BarItem ">
+                    <div class="BarBook">
+                        <h4>Python</h4>
+                        <p>单元测试，黑盒测试工具</p>
+                        <p>日常编程的好助手</p>
+                        <p>Hack 活动的强大工具</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 BarItem BarItemEnd">
+                    <div class="BarBook">
+                        <h4>JavaScript</h4>
+                        <p>走向 Web 的必经之路</p>
+                        <p>可前可后，成为全栈</p>
+                        <p>统一世界，走向共和</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 信息展示 -->
+    <div class="BodyContainer">
+         <div class="container">
+            <div class="row ContextBlack" style="text-align: center;">
+                <h4 class="text-info">没有什么是算法与数据结构无法解决的，如果有，就加上设计模式与系统架构。</h4>
+                <p>在这里，你将可以学习到很多专业知识，认识到很多志同道合的朋友。</p>
+            </div>
+            <div class="row ContextBlack">
+                <div class="col-sm-3 col-xs-12">
+                    <a href="http://www.lanqiao.org/" class="ImgRect">
+                        <img src="assets/image/b1.jpg">
+                    </a>
+                    <p class="text-info">蓝桥杯比赛</p>
+                    <p>势必夺冠，夺冠有钱！</p>
+                    <p>算法考察，与本科/专科一决雌雄！</p>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <a href="https://www.acm.org/" class="ImgRect">
+                        <img src="assets/image/b2.jpg">
+                    </a>
+                    <p class="text-info">ACM 程序设计</p>
+                    <p>数据结构与算法进阶</p>
+                    <p>更高的水平，更难的题目。</p>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <a href="http://www.nvsc.com.cn/" class="ImgRect">
+                        <img src="assets/image/b3.jpg">
+                    </a>
+                    <p class="text-info">专业技能大赛</p>
+                    <p>利用自己的优势技能</p>
+                    <p>发挥出自身的优势力量。</p>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <a href="http://www.mooctest.org/" class="ImgRect">
+                        <img src="assets/image/b5.jpg">
+                    </a>
+                    <p class="text-info">软件测试</p>
+                    <p>自动化测试，性能测试。</p>
+                    <p>单元测试，集成测试，系统测试。</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row ContextBlack" style="text-align: center;">
+                <h4 class="text-info">加入我们，共同进步</h4>
+                <p>实力之上 专业技能 技术人才 创新科技 永不止步</p>
+            </div>
+            <div class="row ContextBlack">
+                <div class="col-lg-12">
+                    <!-- 图片 -->
+                    <a href="#" class="ImgRect" style="max-height: 420px;">
+                        <img src="assets/image/a1.jpg">
+                        <div class="ImageTextCommon" style="text-align: center;top:34%;">
+                            <h2>自底向上的循环学习过程，共享学习资源。</h2>
+                            <p>欢迎任何愿意志同道合走在一起之人</p>
+                            <button>联系我们</button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row ContextBlack" style="text-align: center;">
+                <h4 class="text-info">关于我们，关于 ACM</h4>
+                <p>实力之上 专业技能 技术人才 创新科技 永不止步</p>
+            </div>
+            <div class="row ContextBlack">
+                <div class="col-md-8">
+                    <!-- 内容 -->
+                    <p>湖南科技职业学院 ACM 协会是少数真正重视开发能力的协会之一，我们不搞什么花里胡哨的活动，没有无聊的口号，没有复杂的文档，只有开发效率与速度！</p>
+                    <p>我们重视一切自愿学习相关技术的新生，我们尊重一切已经有一定经验的开发者。请不要认为我们什么也没有，我们有自己的团队，我们有自己的商业项目，我们有能力并且相信有能力能够在浑浊的社会中别具一格。我们也会有相应的简单的活动，也会有每周的
+                        Oj Rank 排名，也会由老师教导专业的知识。我们可以去北京，我们可以去其他大学参观或考试，我们有程序员应该有的一切。</p>
+                    <p>本协会已与 Google，Baidu 和 Bing 等搜索引擎达成资源战略合作，现在您可用各大搜索引擎，可以节省不少的时间。</p>
+                </div>
+                <div class="col-md-4">
+                    <!-- 图片 -->
+                    <a href="#" class="ImgRect" style="max-height: 160px;">
+                        <img src="assets/image/t1.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <br>
+        <br>
+        <div class="mfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="mfooter-one">
+                            <a href="http://www.hnkjxy.net.cn/">湖南科技职业学院</a>
+                            <a href="http://github.com/xx">Github 仓库</a>
+                            <a href="http://172.16.3.223:9999/">内部 oj 系统</a>
+                            |&nbsp;&nbsp;&nbsp;
+                            <a href="http://bestcoder.hdu.edu.cn/astar2018/">2018 百度之星</a>
+                            <a href="https://tianchi.aliyun.com/dataV/introduction.htm?spm=5176.100066.0.0.51c133afdrxSSv&raceId=231667">阿里物联创新</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12" style="margin-top: 22px;">
+                        <p>© 2018 版权所有 湖南科技职业学院 ACM 协会 | 湖南科技职业学院暮云校区
+                            <br> 项目源码受 MIT 开源协议保护，文档受 CC BY 3.0 或其自身开源协议保护。</p>
+                        <small>致敬：那些纵使不论身在何处，依然不忘学习之人，天道勤酬，学以致用。</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+<script type="text/javascript" src="assets/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+
+<script>
+    $(function () {
+
+        $("#loading").animate({
+            "opacity": "0"
+        }, 1000, function () {
+            $("#loading").css("display", "none");
+        });
+    })
+</script>
+
+</html>
