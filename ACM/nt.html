@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="shortcut icon" href="/icon/favicon.ico">
+
+    <title>
+      数论算法概要，数论的基本概念，数论有关的算法，数论的应用。
+    </title>
+
+ 
+    <link rel="stylesheet" href="css/code-guide.css">
+
+    <!-- Site CSS -->
+    <link href="css/bootstrap1.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/site.min.css" rel="stylesheet">
+    
+  </head>
+  
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand hidden-sm" href="Study.html" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', 'navbar-首页'])">科院ACM训练营</a>
+        </div>
+        <div class="navbar-collapse collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <li><a href="/resource.html" target="_blank" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', '学习资源'])">学习资源</a></li>
+            <li class="hidden-sm hidden-md"><a href="book.html"  target="_blank" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', '参考书籍'])">参考书籍</a></li>
+            <li><a href="/encyclopedic.html" target="_blank" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', '百科知识'])">百科知识</a></li>
+            <li><a href="/mooc.html" target="_blank" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', '慕课视频'])">慕课视频</a></li>
+            <li><a href="/gs.html" target="_blank" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', 'ACM入门'])">ACM入门</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right hidden-sm">
+            <li><a href="/about.html" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', 'about'])">关于</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<header class="jumbotron subhead">
+  <div class="container">
+    <h3>数论算法概要</h3>
+    <p class="lead">内容包括整数的整除、数论函数、同余及其运算、同余方程、素性测试与整数分解等。同时，注重数论有关的算法，以及数论的应用。</p>
+  </div>
+</header>
+
+
+<div class="section toc">
+  <div class="col">
+    <h4>数论</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://en.wikipedia.org/wiki/Number_theory" target="_blank">数论</a>是研究正整数集合及其性质的数学分支。<br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://baike.baidu.com/subview/17568/5118208.htm" target="_blank">数论</a>大致可分为初等数论和高等数论。初等数论是用初等方法研究的数论，其研究方法本质上说，就是利用整数环的整除性质，主要包括整除理论、同余理论、连分数理论。<br>&nbsp;&nbsp;&nbsp;&nbsp;数论是最为古老的纯数学的分支，被称为数学的皇后（"The Queen of Mathematics"），揭示了数学的基础。<br>&nbsp;&nbsp;&nbsp;&nbsp;数论研究<a href="https://en.wikipedia.org/wiki/Prime_number" target="_blank">素数</a>，整数对象的属性以及整数的通则规律。<br>&nbsp;&nbsp;&nbsp;&nbsp;数论应用广泛，例如计算方法、代数编码、组合论等方面都广泛使用了初等数论范畴的许多研究成果；<br>&nbsp;&nbsp;&nbsp;&nbsp;数论是密码学的数学基础。密码系统与密码分析都需要用到数论，关乎网络信息安全，数论及其算法受到广泛重视。</p>
+  </div>
+  <div class="col">
+    <h4>自然数类型</h4>
+    <ul>
+				<li><a href="https://en.wikipedia.org/wiki/Parity_%28mathematics%29" target="_blank">Even and odd numbers（奇数与偶数）</a>
+				</li>
+				<li><a href="https://en.wikipedia.org/wiki/Square_number" target="_blank">Square number（平方数）</a>
+				</li>
+				<li><a href="https://en.wikipedia.org/wiki/Cube_%28algebra%29" target="_blank">Cube (algebra)（立方数）</a>
+				</li>
+				<li><a href="https://en.wikipedia.org/wiki/Prime_number" target="_blank">Prime number（素数）</a>
+				</li>
+				<li><a href="https://en.wikipedia.org/wiki/Composite_number" target="_blank">Composite number（合数）</a>
+				</li>
+				<li><a href="https://en.wikipedia.org/wiki/Congruent_number" target="_blank">Congruent number（同余数）</a>
+				</li>
+				<li><a href="https://en.wikipedia.org/wiki/Triangular_number" target="_blank">Triangular number（三角数）</a>
+				</li>
+				<li><a href="https://en.wikipedia.org/wiki/Perfect_number" target="_blank">Perfect number（完全数）</a>
+				</li>
+				<li><a href="https://en.wikipedia.org/wiki/Fibonacci_number" target="_blank">Fibonacci number（菲波拉契数）</a>
+				</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>数论四大定理</h4>
+    <ul>
+		<li><a href="http://baike.baidu.com/view/3798307.htm" target="_blank">数论四大定理</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/104247.htm" target="_blank">威尔逊定理</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/48903.htm" target="_blank">欧拉定理</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/157384.htm" target="_blank">孙子定理</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/263807.htm" target="_blank">费马小定理</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Wilson's_theorem" target="_blank">Wilson's theorem</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Euler's theorem" target="_blank">Euler's theorem</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Chinese_remainder_theorem" target="_blank">Chinese remainder theorem</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Fermat's_little_theorem" target="_blank">Fermat's little theorem</a>
+		</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>典型数论问题</h4>
+    <ul>
+        <li>平方和：两个平方数之和是否为平方数？</li>
+        <li>高幂次和：两个立方数之和是否为立方数？</li>
+        <li>素数无穷</li>
+        <li>数的形状：平方数，三角数</li>
+        <li>孪生素数</li>
+        <li>梅森素数</li>
+        <li>素性测试</li>
+        <li>整数分解</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section toc">
+  <div class="col">
+    <h4>1 整数可除性</h4>
+    <ul>
+        <li>整除</li>
+        <li>素数</li>
+        <li>带余除法（欧几里得除法）</li>
+        <li>公约数与最大公约数</li>
+        <li>辗转相除法</li>
+        <li>算术基本定理</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>1.1 整除概念</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【定义1.1.1】设a, b∈Z（整数集合），b≠0，如果存在q∈Z，使得a＝bq，则称b整除a或a可被b整除，记作b|a，且称a是b的倍数，b是a的因数（也可称为除数、约数、因子）。否则，称b不能整除a或a不能被b整除，记作b\|a。</p>
+  </div>
+  <div class="col">
+    <h4>整除性质</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【性质1.1.1】设a, b∈Z，则b|a&lt;=&gt;b|-a&lt;=&gt;-b|-a&lt;=&gt;|a|||b|。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【性质1.1.2】传递性。设a, b，c∈Z，若c|b且b|a，则c|a。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【性质1.1.3】设a, b，c∈Z，若c|b且c|a，则c|a±b。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【性质1.1.4】设a, b，c∈Z，若c|b且c|a，则对于任意整数s、t，有c|sa+tb。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【性质1.1.5】设a, b∈Z，若b|a且a|b，则a=±b。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【性质1.1.6】b|a&lt;=&gt;cb|ca（c≠0）。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【性质1.1.7】若b|a且a≠0，则|b|≤|a|。</p>
+  </div>
+  <div class="col">
+    <h4>素数</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【定义1.1.2】设整数p≠0, ±1。如果它除了显然约数±1, ±p外没有其它的约数，那么，就称p为<a href="https://en.wikipedia.org/wiki/Prime_number" target="_blank">素数</a>（或质数、不可约数）。若a≠0, ±1，且a不是素数，则称a为合数。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【定理1.1.1】<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(i) 大于1的最小正因数必是素数。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ii)n是正整数，若对所有满足2≤p≤√ n的而言，有p\|n，则n是素数。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【定理1.1.2】素数有无穷多。</p>
+  </div>
+</div>
+    
+<div class="section toc">
+  <div class="col">
+    <h4>带余除法</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【定理1.1.3】设a, b是两个给定的整数，b≠0。那么，一定存在唯一的一对整数q与r，满足<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a=qb+r, 0≤r&lt;|b|<br>一般情况下，约定b>0，则上式可表示为<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a=qb+r, 0≤r&lt;b</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【定理1.1.4】设a, b是两个给定的整数，b≠0，则对任意的整数c,一定存在唯一的一对整数q与r，满足<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a=qb+r, 0≤r&lt;|b|+c</p>
+  </div>
+  <div class="col">
+    <h4>1.2 整数表示</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【定理1.2.1】设p是大于1的正整数，则每个正整数n可以唯一地表示成<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n=akp^k+ak-1p^k-1+...+a1p+a0<br>其中ai为整数，0≤ai&le;p(i=0,1,...,k)且首项系数ak≠0（即p^k≤n&lt;p^k+1）。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【定义1.2.1】用n=(akak-1...a1a0)p表示展开式<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n=akp^k+ak-1p^k-1+...+a1p+a0<br>其中ai为整数，0≤ai&le;p-1(i=0,1,...,k)，ak≠0，并称其为整数n的<b>p进制表示</b>。</p>
+  </div>
+  <div class="col">
+    <h4>1.3 最大公约数</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【定义1.3.1】设a1,a2,...,an是n个整数（n≥2），若整数d是它们中每一个数的因数，那么d就称做a1,a2,...,an的公约数；若a1,a2,...,an不全为0，那么a1,a2,...,an的公约数中最大的一个叫做<a href="https://en.wikipedia.org/wiki/Greatest_common_divisor" target="_blank">最大公约数</a>，记作(a1,a2,...,an)。当(a1,a2,...,an)=1时，称a1,a2,...,an互素。</p>
+    <p>相关链接：<a href="http://blog.csdn.net/tigerisland45/article/details/51151529" target="_blank">最大公约数GCD的三种算法程序</a></p>
+  </div>
+  <div class="col">
+    <h4>最大公约数性质</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【性质1.3.1】(a)=|a|。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【性质1.3.2】(a,b)=(b,a)。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【性质1.3.3】设a、b为正整数，若b|a，则(a,b)=b。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【性质1.3.4】设p为素数，a为整数，若p\|a，则(p,a)=1。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【性质1.3.5】设a1,a2,...,an是n个不完全为零的整数，则<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(i)a1,a2,...,an与|a1|,|a2|,...,|an|的公约数相同；<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ii)(a1,a2,...,an)=(|a1|,|a2|,...,|an|)。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【性质1.3.6】设a,b,c是三个不完全为零的整数，a=bq+c，其中q是整数，则&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(a,b)=(b,c)<br></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【性质1.3.7】对于任意整数x,y，有<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(a,b)=(a,b,ax)=(a,b,by)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【性质1.3.8】对于任意整数x，有<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(a,b)=(a,b+ax)=(a+bx,b)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【性质1.3.9】<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(i)设a,b均为偶数，则(a,b)=2(a/2,b/2);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ii)设a为偶数，b为奇数，则(a,b)=(a/2,b);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(iii)设a,b均为奇数，则(a,b)=(a,(a-b)/2)=((a-b)/2,b)。</p>
+  </div>
+</div>
+
+<div class="section toc">
+  <div class="col">
+    <h4>计算(a, b)算法</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;即求最大公约数算法，目的是实现计算函数GCD(a, b)</p>
+    <ul>
+        <li>辗转相除法（广义欧几里得除法）（<a href="https://en.wikipedia.org/wiki/Euclidean_algorithm" target="_blank">Euclidean algorithm</a>）</li>
+        <li>Stein算法</li>
+        <li>更相减损术</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>1.4 最小公倍数</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【定义1.4.1】设a1,a2,...,an为整数，若m是这些数的倍数，则称m为这n个数的一个公倍数，所有公倍数中最小的正整数叫做<a href="https://en.wikipedia.org/wiki/Least_common_multiple" target="_blank">最小公倍数</a>，记作[a1,a2,...,an]。</p>
+    <P>相关链接：<a href="http://blog.csdn.net/tigerisland45/article/details/51158539" target="_blank">计算最小公倍数LCM</a></P>
+  </div>
+  <div class="col">
+    <h4>1.5 算术基本定理</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【定理1.5.1】任一整数n＞1都可以表示成素数的乘积。且在不考虑乘积顺序的情况下，该表达式是唯一的。即n=p1p2...pk，p1≤p2≤...≤pk</p>
+  </div>
+  <div class="col">
+    <h4>2. 数论函数</h4>
+    <ul>
+        <li>数论函数</li>
+        <li>函数pot<SUB>p</SUB>n</li>
+        <li>Euler（欧拉）函数φ(n)</li>
+        <li>莫比乌斯函数μ(n)</li>
+        <li>素数个数函数π(n)</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section toc">
+  <div class="col">
+    <h4>2.1 数论函数</h4>
+    <ul>
+        <li>下整数函数ceil(x)</li>
+        <li>上整数函数floor(x)</li>
+        <li>四舍五入函数[x]</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>2.3 函数pot<SUB>p</SUB>n</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【定义2.3.1】</a>。</p>
+  </div>
+  <div class="col">
+    <h4>2.4 欧拉函数φ(n)</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【定义2.4.1】设n为正整数，则1,2,...,n中与n互素的整数的个数记做，叫做<a href="https://en.wikipedia.org/wiki/Euler_function" target="_blank">Euler（欧拉）函数</a>。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【性质2.4.1】设p为素数，则φ(p)=p-1。</p>
+    <p>相关链接：<a href="http://blog.csdn.net/tigerisland45/article/details/51228747" target="_blank">欧拉函数（计算程序）</a></p>
+  </div>
+  <div class="col">
+    <h4>2.6 素数个数函数π(n)</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【定义2.6.1】记1～n的所有素数的个数为π(n)，称为素数个数函数。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【定理2.6.1】（素数定理）当n很大时，小于n的素数个数近似等于n/ln(n)。</p>
+  </div>
+</div>                
+
+<div class="section toc">
+  <div class="col">
+    <h4>3. 同余及其运算</h4>
+    <ul>
+        <li>同余概念及基本性质</li>
+        <li>剩余类及完全剩余系</li>
+        <li>既约剩余系</li>
+        <li>欧拉定理和费尔马小定理</li>
+        <li><a href="https://en.wikipedia.org/wiki/Modular_exponentiation" target="_blank">模幂计算</a></li>
+        <li>一次不定方程</li>
+        <li>矩阵同余运算</li>
+        <li>同余应用</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>3.4 欧拉定理和费尔马小定理</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【定理3.4.1】（<a href="https://en.wikipedia.org/wiki/Euler's theorem" target="_blank">欧拉定理</a>）设m是大于1的整数，若整数a满足(a,m)=1，则有a<sup>φ(m)</sup>≡1(mod m)。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;【定理3.4.2】（<a href="https://en.wikipedia.org/wiki/Fermat's_little_theorem" target="_blank">费尔马小定理</a>）设p为素数，a为任意正整数，则<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a<sup>p</sup>≡a(mod p)。</p>
+  </div>
+  <div class="col">
+    <h4>3.5 模幂计算</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;模幂计算也称为乘方取模运算，有采用二分法的快速计算法，其计算复杂度为log(n)。</p>
+    <p>相关链接：<a href="http://blog.csdn.net/tigerisland45/article/details/51176945" target="_blank">乘方取模计算（模幂计算）（计算程序）</a></p>
+  </div>
+  <div class="col">
+    <h4>3.6 一次不定方程</h4>
+    <ul>
+        <li>二元一次不定方程</li>
+        <li>n元一次不定方程</li>
+        <li>n元一次不定方程组</li>
+    </ul>
+  </div>
+</div>                
+
+<div class="section toc">
+  <div class="col">
+    <h4>二元一次不定方程</h4>
+    <p>二元一次不定方程可以使用扩展欧几里德算法来求解。</p>
+    <p>相关链接：<a href="http://blog.csdn.net/tigerisland45/article/details/51205308" target="_blank"> 扩展欧几里得算法（计算程序）</a></p>
+  </div>
+  <div class="col">
+    <h4>4. 同余方程</h4>
+    <ul>
+        <li>基本概念</li>
+        <li>一次同余方程</li>
+        <li>中国剩余定理</li>
+        <li>高次同余方程的解数及解法</li>
+        <li>素数模同余方程</li>
+        <li>同余方程应用</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>5. 二次同余方程与平方剩余</h4>
+    <ul>
+        <li>一般二次同余方程</li>
+        <li>模为奇素数的平方剩余与平方非剩余</li>
+        <li>勒让德符号</li>
+        <li>雅可比符号</li>
+        <li>模p平方根</li>
+        <li>模数为合数情形</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>6. 原根与离散对数</h4>
+    <ul>
+        <li>整数的阶及其性质</li>
+        <li>原根存在性与计算方法</li>
+        <li>离散对数</li>
+        <li>离散对数计算</li>
+        <li>二项同余方程与n次剩余</li>
+        <li>原根与离散对数应用</li>
+        <li>单向函数</li>
+    </ul>
+  </div>
+</div>                
+    
+<div class="section toc">
+  <div class="col">
+    <h4>7. 连分数</h4>
+    <ul>
+        <li>连分数</li>
+        <li>简单连分数</li>
+        <li>循环连分数</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>8. 素性测试与整数分解</h4>
+    <ul>
+        <li>素性测试的精确方法</li>
+        <li>伪素数与Fermat测试算法</li>
+        <li>Euler伪素数与Solovar-Stassen测试算法</li>
+        <li>强伪素数与Miller-Rabin测试算法</li>
+        <li>正整数分解</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>素性测试方法</h4>
+    <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Primality_test" target="_balnk">Primality test</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/AKS_primality_test" target="_balnk">AKS primality test</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Elliptic_curve_primality" target="_balnk">Elliptic curve primality</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Baillie%E2%80%93PSW_primality_test" target="_balnk">Baillie–PSW primality test</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test" target="_balnk">Miller–Rabin primality test</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Solovay%E2%80%93Strassen_primality_test" target="_balnk">Solovay–Strassen primality test</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Fermat_primality_test" target="_balnk">Fermat primality test</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Lucas_primality_test" target="_balnk">Lucas primality test</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test" target="_balnk">Lucas–Lehmer primality test</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer%E2%80%93Riesel_test" target="_balnk">Lucas–Lehmer–Riesel test</a>
+		</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>整数分解方法</h4>
+    <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Integer_factorization" target="_balnk">Integer factorization</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Trial_division" target="_balnk">Trial division</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Wheel_factorization" target="_balnk">Wheel factorization</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Pollard's_rho_algorithm" target="_balnk">Pollard's rho algorithm</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Algebraic-group_factorisation_algorithm" target="_balnk">Algebraic-group factorisation algorithm</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Pollard's_p_%E2%88%92_1_algorithm" target="_balnk">Pollard's p − 1 algorithm</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Williams'_p_%2B_1_algorithm" target="_balnk">Williams' p + 1 algorithm</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Lenstra_elliptic_curve_factorization" target="_balnk">Lenstra elliptic curve factorization</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Fermat's_factorization_method" target="_balnk">Fermat's factorization method</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Euler's_factorization_method" target="_balnk">Euler's factorization method</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Special_number_field_sieve" target="_balnk">Special number field sieve</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Dixon's_factorization_method" target="_balnk">Dixon's factorization method</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Continued_fraction_factorization" target="_balnk">Continued fraction factorization</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Quadratic_sieve" target="_balnk">Quadratic sieve</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Rational_sieve" target="_balnk">Rational sieve</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/General_number_field_sieve" target="_balnk">General number field sieve</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Shanks'_square_forms_factorization" target="_balnk">Shanks' square forms factorization</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Shor's_algorithm" target="_balnk">Shor's algorithm</a>
+		</li>
+		<li><a href="https://en.wikipedia.org/wiki/Integer_factorization_records" target="_balnk">Integer factorization records</a>
+		</li>
+    </ul>
+  </div>
+</div>                
+    
+<div class="section toc">
+  <div class="col">
+    <h4>9. 有限域</h4>
+    <ul>
+        <li>集合及其运算</li>
+        <li>群</li>
+        <li>环</li>
+        <li>域</li>
+    </ul>
+  </div>
+</div>                
+    
+    
+    
+     
+    <footer class="footer ">
+      <div class="container">
+        <div class="row footer-top">
+          <div class="col-sm-6 col-lg-6">
+            <h4>
+              <a>科院ACM训练营</a>
+            </h4>
+            <p>本网站为KeYuan ACM-ICPC训练营日常训练所用。</p>
+          </div>
+          <div class="col-sm-6  col-lg-5 col-lg-offset-1">
+            <div class="row about">
+              <div class="col-xs-3">
+                <h4>关于</h4>
+                <ul class="list-unstyled">
+                  <li><a href="about.html">关于我们</a></li>
+                  <li><a href="">友情链接</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-3">
+                <h4>联系方式</h4>
+                <ul class="list-unstyled">
+                  <li><a href="mailto:1826869334@qq.com">电子邮件</a></li>
+                </ul>
+              </div>
+             
+            </div>
+    
+          </div>
+        </div>
+        <hr/>
+        <div class="row footer-bottom">
+          <ul class="list-inline text-center">
+            <li><a href="http://www.hnkjxy.net.cn/" target="_blank">湖南科技职业学院</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    </body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="shortcut icon" href="icon/favicon.ico">
+
+    <title>
+      百科知识—编程与数学常识
+    </title>
+
+    
+    <link rel="stylesheet" href="css/code-guide.css">
+
+    <!-- Site CSS -->
+    <link href="css/bootstrap1.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/site.min.css" rel="stylesheet">
+  </head>
+  
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand hidden-sm" href="Study.html" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', 'navbar-首页'])">科院ACM训练营</a>
+        </div>
+        <div class="navbar-collapse collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <li><a href="resource1.html" target="_blank" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', '学习资源'])">学习资源</a></li>
+            <li class="hidden-sm hidden-md"><a href="book.html"  target="_blank" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', '参考书籍'])">参考书籍</a></li>
+            <li><a href="encyclopedic.html" target="_blank" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', '百科知识'])">百科知识</a></li>          
+            <li><a href="mooc.html" target="_blank" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', '慕课视频'])">慕课视频</a></li>
+            <li><a href="gc.html" target="_blank" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', 'ACM入门'])">ACM入门</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right hidden-sm">
+            <li><a href="about.html" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', 'about'])">关于</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<header class="jumbotron subhead">
+  <div class="container">
+    <h3>百科知识—编程与数学常识</h3>
+    <p class="lead">有关ACM-ICPC的常识；编写程序必要的知识，包括程序设计、计算机语言、数据结构和算法等；必要的数学知识。</p>
+  </div>
+</header>
+
+
+<div class="section toc">
+  <div class="col">
+    <h4>程序设计大赛等</h4>
+    <ul>
+        <li><a href="http://baike.baidu.com/view/109324.htm" target="_blank">ACM程序设计大赛</a>
+		</li>
+        <li><a href="http://baike.baidu.com/view/8033194.htm" target="_blank">蓝桥杯</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/5225025.htm" target="_blank">百度之星程序设计大赛</a>
+		</li>
+		<li><a href="http://www.saikr.com/codercup/" target="_blank">CoderCup编程大赛</a>
+		</li>
+		<li><a href="http://cccc.patest.cn/" target="_blank">中国高校计算机大赛</a>
+		</li>
+		<li><a href="http://studentclub.msra.cn/" target="_blank">微软学生俱乐部</a>
+		</li>
+		<li><a href="http://www.saikr.com/c/nl/3685" target="_blank">Google Code Jam</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/622251.htm" target="_blank">TopCoder</a>
+		</li>
+		<li><a href="http://www.saikr.com/" target="_blank">赛氪</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/1652123.htm" target="_blank">国际信息学奥林匹克竞赛</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/553911.htm" target="_blank">全国青少年信息学奥林匹克竞赛</a>
+		</li>
+		<li><a href="http://www.cspro.org/" target="_blank">CCF资格认证</a>
+		</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>ACM-ICPC算法</h4>
+    <ul>
+	    <li><a href="http://baike.baidu.com/subview/18930/11095135.htm" target="_blank">博弈论</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/409351.htm" target="_blank">自动机</a>
+		</li>
+		<li><a href="http://baike.baidu.com/subview/17568/5118208.htm" target="_blank">数论</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/14697.htm" target="_blank">计算几何</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/1201949.htm" target="_blank">图论算法</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/1436430.htm" target="_blank">字符串匹配</a>
+		</li>
+		<li><a href="http://baike.baidu.com/item/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/821134" target="_blank">组合数学</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/165435.htm" target="_blank">网络流</a>
+		</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>算法</h4>
+    <ul>
+        <li><a href="http://baike.baidu.com/view/7420.htm" target="_blank">算法</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/104946.htm" target="_blank">时间复杂度</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/540497.htm" target="_blank">空间复杂度</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/112223.htm" target="_blank">递推算法</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/649495.htm" target="_blank">迭代法</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/96473.htm" target="_blank">递归</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/79218.htm" target="_blank">穷举法</a>
+		</li>
+        <li><a href="http://baike.baidu.com/view/1583824.htm" target="_blank">分治法</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/298415.htm" target="_blank">贪心算法</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/28146.htm" target="_blank">动态规划</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/45.htm" target="_blank">回溯法</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/2102243.htm" target="_blank">分支限界法</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/45853.htm" target="_blank">遗传算法</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/5021113.htm" target="_blank">随机森林</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/155969.htm" target="_blank">加密算法</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/1241014.htm" target="_blank">欧几里得算法</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/31917.htm" target="_blank">割圆术</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/1431260.htm" target="_blank">秦九韶算法</a>
+		</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>排序与查找算法</h4>
+    <ul>
+        <li><a href="http://baike.baidu.com/view/610605.htm" target="_blank">二分查找</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/58783.htm" target="_blank">排序</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/2969216.htm" target="_blank">内部排序</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/1368718.htm" target="_blank">外部排序</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/19016.htm" target="_blank">快速排序算法</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/178698.htm" target="_blank">希尔排序</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/157305.htm" target="_blank">堆排序</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/254413.htm" target="_blank">冒泡排序</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/547263.htm" target="_blank">选择排序</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/396887.htm" target="_blank">插入排序</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/90797.htm" target="_blank">归并排序</a>
+		</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section toc">
+  <div class="col">
+    <h4>基本概念</h4>
+    <ul>
+        <li><a href="http://baike.baidu.com/view/94238.htm" target="_blank">正则表达式</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/7420.htm" target="_blank">算法</a>
+		</li>
+		<li><a href="http://baike.baidu.com/subview/9900/5066576.htm" target="_blank">数据结构</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/8332.htm" target="_blank">程序设计</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/11614424.htm" target="_blank">结构程序设计</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/182289.htm" target="_blank">结构化程序设计</a>
+		</li>
+		<li><a href="http://baike.baidu.com/subview/249254/7070948.htm" target="_blank">面向对象程序设计</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/128511.htm" target="_blank">程序设计语言</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/14900.htm" target="_blank">高级语言</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/1573681.htm" target="_blank">形式语言</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/920706.htm" target="_blank">自动机理论</a>
+		</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>数据结构</h4>
+    <ul>
+		<li><a href="http://baike.baidu.com/subview/143352/6479956.htm" target="_blank">树</a>
+		</li>
+        <li><a href="http://baike.baidu.com/view/1420784.htm" target="_blank">树状数组</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/670683.htm" target="_blank">线段树</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/1407245.htm" target="_blank">Trie</a>
+		</li>
+		<li><a href="http://baike.baidu.com/subview/143347/12514144.htm#viewPageContent" target="_blank">图</a>
+		</li>
+		<li><a href="http://baike.baidu.com/subview/549595/549595.htm" target="_blank">深度优先遍历</a>
+		</li>
+		<li><a href="http://baike.baidu.com/subview/549597/549597.htm" target="_blank">广度优先遍历</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/521705.htm" target="_blank">并查集</a>
+		</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>算法问题</h4>
+    <ul>
+		<li><a href="http://baike.baidu.com/view/191666.htm" target="_blank">汉诺塔</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/698719.htm" target="_blank">八皇后问题</a>
+		</li>
+		<li><a href="http://baike.baidu.com/subview/62732/6927377.htm" target="_blank">华容道</a>
+		</li>
+		<li><a href="http://baike.baidu.com/subview/35837/5150685.htm" target="_blank">魔方</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/62704.htm" target="_blank">独立钻石</a>
+		</li>
+		<li><a href="http://baike.baidu.com/subview/27263/6928123.htm" target="_blank">九连环</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/367996.htm" target="_blank">百鸡问题</a>
+		</li>
+		<li><a href="http://baike.baidu.com/subview/325901/17868247.htm" target="_blank">鸡兔同笼</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/717633.htm" target="_blank">约瑟夫环</a>
+		</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>数与数列</h4>
+    <ul>
+        <li><a href="http://baike.baidu.com/view/19911.htm" target="_blank">自然数</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/10626.htm" target="_blank">素数</a>
+		</li>
+		<li><a href="http://baike.baidu.com/subview/1301/8862554.htm" target="_blank">合数</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/1596350.htm" target="_blank">赢数</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/2519728.htm" target="_blank">亏数</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/4084060.htm" target="_blank">贝尔数</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/2499752.htm" target="_blank">卡特兰数</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/7804.htm" target="_blank">杨辉三角</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/19074.htm" target="_blank">完全数</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/275527.htm" target="_blank">亲和数</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/816.htm" target="_blank">斐波那契数列</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/44574.htm" target="_blank">梅森素数</a>
+		</li>
+		<li><a href="http://baike.baidu.com/subview/1808/10645815.htm" target="_blank">哥德巴赫猜想</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/272607.htm" target="_blank">孪生素数猜想</a>
+		</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section toc">
+  <div class="col">
+    <h4>数论</h4>
+    <ul>
+        <li><a href="http://baike.baidu.com/subview/17568/5118208.htm" target="_blank">数论</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/651164.htm" target="_blank">算术基本定理</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/3798307.htm" target="_blank">数论四大定理</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/104247.htm" target="_blank">威尔逊定理</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/48903.htm" target="_blank">欧拉定理</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/157384.htm" target="_blank">孙子定理</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/263807.htm" target="_blank">费马小定理</a>
+		</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>图论</h4>
+    <ul>
+        <li><a href="http://baike.baidu.com/view/79350.htm" target="_blank">图论</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/43945.htm" target="_blank">四色定理</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/142962.htm" target="_blank">七桥问题</a>
+		</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>NP问题</h4>
+    <ul>
+        <li><a href="http://baike.baidu.com/view/272414.htm" target="_blank">NP完全问题</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/158424.htm" target="_blank">NP问题</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/9436482.htm" target="_blank">P问题</a>
+		</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4>其他</h4>
+    <ul>
+        <li><a href="http://baike.baidu.com/view/6942297.htm" target="_blank">OEIS</a>
+		</li>
+		<li><a href="http://www.ciscn.cn/" target="_blank">信息安全竞赛官网</a>
+		</li>
+		<li><a href="http://www.noi.cn/" target="_blank">信息奥赛官网</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/521308.htm" target="_blank">usaco</a>
+		</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section toc">
+  <div class="col">
+    <h4>人物志</h4>
+    <ul>
+        <li><a href="http://baike.baidu.com/subview/4704/11215044.htm" target="_blank">笛卡尔</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/119100.htm" target="_blank">莱昂哈德·欧拉</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/6303430.htm" target="_blank">皮耶·德·费玛</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/16578.htm" target="_blank">毕达哥拉斯</a>
+		</li>
+		<li><a href="http://baike.baidu.com/subview/105190/12860842.htm" target="_blank">梅森</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/483494.htm" target="_blank">布莱士·帕斯卡</a>
+		</li>
+		<li><a href="http://baike.baidu.com/subview/5841/18003947.htm" target="_blank">欧几里得</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/112871.htm" target="_blank">斐波那契</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/398375.htm" target="_blank">戴维·希尔伯特</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/251045.htm" target="_blank">亨利·庞加莱</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/1703697.htm" target="_blank">艾伦·麦席森·图灵</a>
+		</li>
+		<li><a href="http://baike.baidu.com/view/54300.htm" target="_blank">约翰·冯·诺依曼</a>
+		</li>
+    </ul>
+  </div>
+</div>
+
+
+    <footer class="footer ">
+      <div class="container">
+        <div class="row footer-top">
+          <div class="col-sm-6 col-lg-6">
+            <h4>
+              <a>科院ACM训练营</a>
+            </h4>
+            <p>本网站为KeYuan ACM-ICPC训练营日常训练所用。</p>
+          </div>
+          <div class="col-sm-6  col-lg-5 col-lg-offset-1">
+            <div class="row about">
+              <div class="col-xs-3">
+                <h4>关于</h4>
+                <ul class="list-unstyled">
+                  <li><a href="about.html">关于我们</a></li>
+                  <li><a href="">友情链接</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-3">
+                <h4>联系方式</h4>
+                <ul class="list-unstyled">
+                  <li><a href="mailto:1826869334@qq.com">电子邮件</a></li>
+                </ul>
+              </div>
+           
+            </div>
+    
+          </div>
+        </div>
+        <hr/>
+        <div class="row footer-bottom">
+          <ul class="list-inline text-center">
+            <li><a href="http://www.hnkjxy.net.cn/" target="_blank">湖南科技职业学院</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    </body>
+</html>
