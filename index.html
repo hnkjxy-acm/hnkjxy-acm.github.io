@@ -19,55 +19,29 @@
         	</div>
    		<![endif]-->
 </head>
-<style type="text/css">
-    .mybar {
-  background-color:#858585;  /*此处是我修改的地方*/
-
-}
-
-
-</style>
 
 <body>
-    <!-- <div id="loading" style="background-color: black;position: fixed;top: 0px;bottom: 0px;left: 0px;right: 0px; z-index:1000;">
-        <div style="position: relative;top: 45%;color: white;text-align: center;left: 0px;right: 0px;">
-            <h3 id="loading-text">Loading...</h3>
-            <script>
-                (function () {
-                    var ele = document.getElementById("loading-text");
-                    var loadmask = null;
-                    var i = 0;
-
-                    function loading() {
-                        ele.innerHTML += ".";
-                        if (i > 10) clearInterval(loadmask);
-                        i++;
-                    }
-                    loadmask = setInterval(loading, 1000);
-                })();
-            </script>
-        </div>
-    </div> -->
-
-    <div class="navbar-inverse navbar-fixed-top mybar" >
+    <div class="Header">
         <div class="HeaderTitle">
             <img src="assets/image/logo/ACM.png" width="64px">
             <b>湖南科技职业学院 ACM 协会</b>
         </div>
         <div class="HeaderMenu phone-none">
-
-
             <a class="" target="_black" href="ACM/index.html">详细信息</a>
-
         </div>
     </div>
-    <div class="ImageContainer">
+    <div class="ImageContainer" style="min-height: 400px;">
         <div id="Image_1" class="ImageCar">
             <img src="assets/image/1.jpg" draggable="false" height="100%">
             <div class="ImageText">
                 <h2>天道勤酬，学以致用</h2>
                 <p>学习更深的技术，获取更深的技术栈</p>
-             <a href="https://jq.qq.com/?_wv=1027&k=5OQYtYf"> <button>加入我们</button></a>
+                <a href="https://jq.qq.com/?_wv=1027&k=5OQYtYf">
+                    <button>加入我们</button>
+                </a>
+                <a class="" target="_black" href="ACM/index.html">
+                    <button>更多信息</button>
+                </a>
             </div>
         </div>
         <div id="Image_2" class="ImageCar" style="display: none;">
@@ -75,7 +49,12 @@
             <div class="ImageText">
                 <h2>共同学习，交识志同道合之人</h2>
                 <p>永不言弃，学习是历程中必不可少的经历。</p>
-                 <a href="https://jq.qq.com/?_wv=1027&k=5OQYtYf"> <button>加入我们</button></a>
+                <a href="https://jq.qq.com/?_wv=1027&k=5OQYtYf">
+                    <button>加入我们</button>
+                </a>
+                <a class="" target="_black" href="ACM/index.html">
+                    <button>更多信息</button>
+                </a>
             </div>
         </div>
         <div id="Image_3" class="ImageCar" style="display: none;">
@@ -84,7 +63,12 @@
                 <h2>Java，C++，Python 学习</h2>
                 <p>无论身处何处，让遗憾伴随努力，让悲愤化成动力</p>
                 <p>学习只是一种习惯，努力却成为了信念！</p>
-                <a href="https://jq.qq.com/?_wv=1027&k=5OQYtYf"> <button>前往参考</button></a>
+                <a href="https://jq.qq.com/?_wv=1027&k=5OQYtYf">
+                    <button>前往参考</button>
+                </a>
+                <a class="" target="_black" href="ACM/index.html">
+                    <button>更多信息</button>
+                </a>
             </div>
         </div>
         <div id="Image_4" class="ImageCar" style="display: none;">
@@ -93,7 +77,12 @@
                 <h2>创新，开发，创造</h2>
                 <p>创新是一种乐趣，开发是一种能力，创造是一种信仰！</p>
                 <p>能力的表现源于项目的成败！</p>
-                 <a href="https://jq.qq.com/?_wv=1027&k=5OQYtYf"> <button>联系我们</button></a>
+                <a href="https://jq.qq.com/?_wv=1027&k=5OQYtYf">
+                    <button>联系我们</button>
+                </a>
+                <a class="" target="_black" href="ACM/index.html">
+                    <button>更多信息</button>
+                </a>
             </div>
         </div>
     </div>
@@ -191,6 +180,29 @@
         </div>
         <br>
         <br>
+        <div class="container" style="overflow: hidden;">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row ContextBlack" style="text-align: center;">
+                        <h4 class="text-info">宣传视频 | from BiliBili</h4>
+                    </div>
+                    <div class="ForPhone text-center" style=" margin: auto;">
+                        <a href="javascript:void(0);" onclick="PGAE.playBilibili()">
+                            <button>单击展开视频</button>
+                        </a>
+                        <p>建议手机播放时使用横屏播放。</p>
+                    </div>
+                    <!-- 视频播放器容器 -->
+                    <div style="width: 96%;margin: auto;">
+                        <iframe id="bilibilipalyer" class="phone-none PlayerForBilibili" src="//player.bilibili.com/player.html?aid=32063959&cid=56090318&page=1"
+                            scrolling="yes" border="0" frameborder="no" framespacing="0" height="620" width="100%" style="max-width:1366px;"
+                            allowfullscreen="true">
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+        </div>
         <div class="container">
             <div class="row ContextBlack" style="text-align: center;">
                 <h4 class="text-info">加入我们 | 共同进步</h4>
@@ -199,12 +211,14 @@
             <div class="row ContextBlack">
                 <div class="col-lg-12">
                     <!-- 图片 -->
-                    <a href="#" class="ImgRect" style="max-height: 420px;">
+                    <a href="#" class="ImgRect" style="max-height: 420px;color: white;">
                         <img src="assets/image/a1.jpg">
-                        <div class="ImageTextCommon" style="text-align: center;top:34%;">
+                        <div class="ImageTextCommon" style="text-align: center;top:34%;color: white;">
                             <h2>循序渐进的学习过程，共享学习资源</h2>
                             <p>和喜欢的人一起做喜欢的事!</p>
-                             <a href="https://jq.qq.com/?_wv=1027&k=5OQYtYf"> <button>联系我们</button></a>
+                            <a href="https://jq.qq.com/?_wv=1027&k=5OQYtYf">
+                                <button>联系我们</button>
+                            </a>
                         </div>
                     </a>
                 </div>
@@ -234,7 +248,7 @@
                 <div class="col-md-4">
                     <!-- 图片 -->
                     <a href="#" class="ImgRect" style="max-height: 160px;">
-                       <img src="https://i.loli.net/2018/08/14/5b72d2574a02f.png" alt="t1.png" title="t1.png" />
+                        <img src="https://i.loli.net/2018/08/14/5b72d2574a02f.png" alt="t1.png" title="t1.png" />
                     </a>
                 </div>
             </div>
@@ -254,7 +268,9 @@
                             <a href="http://172.16.3.223:9999/">内部 oj 系统</a>
                             |&nbsp;&nbsp;&nbsp;
                             <a href="http://bestcoder.hdu.edu.cn/astar2018/">2018 百度之星</a>
-                         <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=9c024b9710f3f97a09851ec326ae07c42d1a91faf6c3d078a9809145769c8199"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="科技职业学院ACM协会咨" title="科技职业学院ACM协会咨"></a>
+                            <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=9c024b9710f3f97a09851ec326ae07c42d1a91faf6c3d078a9809145769c8199">
+                                <img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="科技职业学院ACM协会咨" title="科技职业学院ACM协会咨">
+                            </a>
 
                         </div>
                     </div>
@@ -274,6 +290,8 @@
 <script type="text/javascript" src="app.js"></script>
 
 <script>
+    //全局变量
+    var PGAE = {};
     $(function () {
 
         $("#loading").animate({
@@ -281,6 +299,10 @@
         }, 1000, function () {
             $("#loading").css("display", "none");
         });
+
+        PGAE.playBilibili = function () {
+            $("#bilibilipalyer").removeClass("phone-none").empty();
+        }
     })
 </script>
 
